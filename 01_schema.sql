@@ -100,6 +100,11 @@ Una vez creadas las tablas, voy a llenarlas con los datos que he descargado
 -- Habilitar la carga local en la sesión
 SET GLOBAL local_infile = 1;
 
+/*=========================================================
+CAMBIAR LA RUTA A LA PROPIA, PARA QUE LLEVE A LOS ARCHIVOS .CSV CORRECTAMENTE
+==========================================================*/
+START TRANSACTION;
+
 -- 1. Clientes
 LOAD DATA LOCAL INFILE 'C:/Users/adria/OneDrive/Escritorio/Proyectos/Modulo_SQL/olist_customers_dataset.csv'
 INTO TABLE olist_customers_dataset
@@ -172,7 +177,7 @@ ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 ROWS;
 
-
+COMMIT;
 /*==========================================================================
 Ahora crearé las tablas que usaré para hacer las consultas.
 Estas serán versiones más resumidas e importantes (al menos, 
@@ -297,10 +302,6 @@ begin
     return categoria;
 end //
 DELIMITER ;
--- Comprobamos si funciona
-select 
-rango_peso(product_weight_g)
-from productos;
 
 /*
 Gracias a esta función, podemos comprobar fácilmente qué tipo de
