@@ -1,2 +1,2 @@
-# proyecto_sql
-Proyecto de final de módulo de SQL.
+# PROYECTO SQL
+Para este proyecto de final de módulo, he usado el dataset de kaggle "Brazilian E-Commerce Public Dataset by Olist". Es necesario descargar los archivos csv, ya sea mediante la web de kaggle o desde este mismo repositorio. Una vez descargados estos archivos, es necesario cambiar el código de '01_schema.sql'. Antes de ejecutar 02_data.sql, utiliza la función de "Reemplazar" de tu editor (Ctrl + H) para cambiar todas las ocurrencias de C:/Users/adria/OneDrive/Escritorio/Proyectos/Modulo_SQL por la ruta real en tu disco duro a la carpeta donde se encuentran los .csv.
